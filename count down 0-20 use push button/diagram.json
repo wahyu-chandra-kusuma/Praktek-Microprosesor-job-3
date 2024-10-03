@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 19.8, "left": 37.8, "attrs": {} },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg1",
+      "top": -109.38,
+      "left": -306.64,
+      "attrs": { "common": "cathode", "digits": "2", "colon": "" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 83,
+      "left": -307.2,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "sevseg1:B", "sevseg1:COM.1", "green", [ "v0" ] ],
+    [ "uno:1", "sevseg1:A", "green", [ "v-249.6", "h-562.2" ] ],
+    [ "sevseg1:B", "uno:2", "green", [ "v-105.6", "h537.6" ] ],
+    [ "sevseg1:C", "uno:9", "green", [ "v27.96", "h432" ] ],
+    [ "sevseg1:D", "uno:7", "green", [ "v18.36", "h460.8" ] ],
+    [ "sevseg1:E", "uno:8", "green", [ "v-0.84", "h470.4" ] ],
+    [ "sevseg1:F", "uno:5", "green", [ "v-28.8", "h9.6" ] ],
+    [ "sevseg1:G", "uno:6", "green", [ "h0" ] ],
+    [ "sevseg1:DIG1", "uno:3", "green", [ "v-57.6", "h518.4" ] ],
+    [ "sevseg1:DIG2", "uno:4", "green", [ "v-48", "h489.6" ] ],
+    [ "btn1:1.r", "uno:10", "green", [ "v0", "h211.4", "v-96", "h211.2" ] ],
+    [ "uno:GND.1", "btn1:2.l", "black", [ "v-19.2", "h-162.9", "v153.6", "h-297.6" ] ]
+  ],
+  "dependencies": {}
+}
